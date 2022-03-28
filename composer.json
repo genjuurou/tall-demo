@@ -1,9 +1,6 @@
 {
-    "name": "laravel/laravel",
+    "name": "genjuurou/tall-demo",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
     "require": {
         "php": "^8.0.2",
         "blade-ui-kit/blade-heroicons": "^1.3",
