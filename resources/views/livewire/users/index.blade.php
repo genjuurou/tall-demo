@@ -17,7 +17,19 @@
                         </figure>
                     </td>
                     <td class="px-4 py-3 whitespace-nowrap">{{ $user->role->name }}</td>
-                    <td class="px-4 py-3 whitespace-nowrap">{{ $user->role->name }}</td>
+                    <td class="px-4 py-3 whitespace-nowrap">
+                        <div class="flex items-center space-x-4 text-sm">
+                            <a href="{{ route('users.show', $user) }}" class="px-2 py-2 font-medium dark:text-zinc-400">
+                                <x-heroicon-o-eye class="w-5 h-5" />
+                            </a>
+                            <button class="px-2 py-2 font-medium dark:text-zinc-400">
+                                <x-heroicon-o-pencil class="w-5 h-5" />
+                            </button>
+                            <button wire:click="delete({{ $user->id }})" class="px-2 py-2 font-medium dark:text-zinc-400">
+                                <x-heroicon-o-trash class="w-5 h-5" />
+                            </button>
+                        </div>
+                    </td>
                 </tr>
             @endforeach
         </x-table>

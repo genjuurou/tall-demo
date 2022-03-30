@@ -34,4 +34,9 @@ class Index extends Component
             $window['last'],
         ]);
     }
+
+    public function delete(int $user): void
+    {
+        User::findOrFail($user)->delete();
+    }
 }
