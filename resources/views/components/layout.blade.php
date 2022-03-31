@@ -13,6 +13,8 @@
     <body>
         <div x-data="app" :class="{ 'dark': themeColors == 'dark' }">
             {{ $slot }}
+
+            <livewire:components.modal />
         </div>
 
         <livewire:scripts />

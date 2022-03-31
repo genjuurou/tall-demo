@@ -1,6 +1,7 @@
 <x-page>
     <x-page-heading title="Users" />
     
+    <button wire:click="openModal('users.create')" class="px-2 py-2 font-medium dark:text-zinc-400">Create</button>
     <x-card>
         <x-table :columns="['User', 'Role', 'Action']">
             @foreach($this->users as $user)

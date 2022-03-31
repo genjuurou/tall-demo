@@ -22,6 +22,11 @@ class Index extends Component
         return view('livewire.users.index');
     }
 
+    public function delete(int $user): void
+    {
+        User::findOrFail($user)->delete();
+    }
+    
     public function elements(): array
     {
         $window = UrlWindow::make($this->users);
@@ -35,8 +40,8 @@ class Index extends Component
         ]);
     }
 
-    public function delete(int $user): void
+    public function openModal(string $component, $data = []): void
     {
-        User::findOrFail($user)->delete();
+        $this->emit('modal.open', array_merge(['component' => $component], $data));
     }
 }
