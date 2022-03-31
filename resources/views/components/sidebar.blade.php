@@ -1,4 +1,4 @@
-<aside class="hidden w-64 shrink-0 z-20 bg-white md:block dark:bg-zinc-800">
+<aside class="hidden w-64 shrink-0 z-20 bg-white lg:block dark:bg-zinc-800">
     <div class="mt-4">
         <x-logo class="text-2xl ml-6" />
         <nav class="mt-4 text-sm font-semibold text-gray-500 dark:text-zinc-400">
