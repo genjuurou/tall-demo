@@ -26,7 +26,7 @@
                             <button class="px-2 py-2 font-medium dark:text-zinc-400">
                                 <x-heroicon-o-pencil class="w-5 h-5" />
                             </button>
-                            <button wire:click="delete({{ $user->id }})" class="px-2 py-2 font-medium dark:text-zinc-400">
+                            <button wire:click="openModal('users.delete', { 'userId': {{ $user->id}} })" class="px-2 py-2 font-medium dark:text-zinc-400">
                                 <x-heroicon-o-trash class="w-5 h-5" />
                             </button>
                         </div>

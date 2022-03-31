@@ -13,6 +13,7 @@ class Modal extends Component
     public $key;
 
     protected $listeners = [
+        'modal.close' => 'close',
         'modal.open' => 'open',
     ];
 
