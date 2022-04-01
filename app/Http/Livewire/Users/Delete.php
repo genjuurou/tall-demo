@@ -22,6 +22,9 @@ class Delete extends Component
     public function submit(): void
     {
         $this->user->delete();
+
+        $this->emit('user.deleted');
+
         $this->close();
     }
 

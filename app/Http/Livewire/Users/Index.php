@@ -11,6 +11,10 @@ use Livewire\WithPagination;
 class Index extends Component
 {
     use WithPagination;
+
+    protected $listeners = [
+        'user.deleted' => '$refresh',
+    ];
     
     public function getUsersProperty(): LengthAwarePaginator
     {
